@@ -56,7 +56,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url('/header.png');
+	background-image: url('/assets/header.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 16px;
