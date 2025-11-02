@@ -82,7 +82,7 @@ searchForm.addEventListener('submit', async (e) => {
 	if (!searchInputValue) return;
 
 	const res = await fetch(
-		`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInputValue}`
+		`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInputValue}`
 	);
 	const data = await res.json();
 
