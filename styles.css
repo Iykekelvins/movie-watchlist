@@ -5,7 +5,9 @@
 	--gray-300: #d1d5db;
 	--gray-400: #9ca3af;
 	--gray-500: #6b7280;
+	--gray-600: #dfdddd;
 	--gray-700: #374151;
+	--gray-800: #363636;
 }
 
 * {
@@ -24,6 +26,12 @@ body {
 
 main {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
 }
 
 button {
@@ -71,7 +79,6 @@ header .top {
 }
 
 header a {
-	text-decoration: none;
 	color: #ffffff;
 	position: relative;
 }
@@ -107,6 +114,7 @@ header .input-field {
 	justify-content: space-between;
 	overflow: hidden;
 	padding-left: 1rem;
+	box-shadow: 0px 1px 2px 0px #0000000d;
 }
 
 header .input-field input,
@@ -132,6 +140,31 @@ header .input-field button {
 	border-left: 1px solid #d1d5db;
 	font-size: 1rem;
 	font-weight: 500;
+}
+
+.empty-state {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.empty-state p {
+	color: var(--gray-600);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 0.5rem;
+}
+
+.empty-state a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.25rem;
+	color: var(--gray-800);
+	font-weight: bold;
+	margin-top: 1.5rem;
 }
 
 @media (max-width: 769px) {
