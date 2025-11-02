@@ -1,3 +1,13 @@
+:root {
+	--bg: #ffffff;
+	--white: #ffffff;
+	--gray-50: #f9fafb;
+	--gray-300: #d1d5db;
+	--gray-400: #9ca3af;
+	--gray-500: #6b7280;
+	--gray-700: #374151;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,4 +16,155 @@
 
 body {
 	font-family: 'Inter', sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--bg);
+}
+
+main {
+	flex: 1;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	font-family: inherit;
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	height: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('/header.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 16px;
+	color: var(--white);
+}
+
+header .container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+header h1 {
+	font-size: 2.674rem;
+	font-weight: 800;
+}
+
+header .top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header a {
+	text-decoration: none;
+	color: #ffffff;
+	position: relative;
+}
+
+header a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	background: #ffffff;
+	transition: all 0.3s ease-in-out;
+	width: 0;
+}
+
+header a:hover::before {
+	width: 100%;
+}
+
+header form {
+	position: absolute;
+	bottom: -7.5%;
+	width: 100%;
+}
+
+header .input-field {
+	border: 1px solid var(--gray-300);
+	background: var(--white);
+	border-radius: 8px;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	padding-left: 1rem;
+}
+
+header .input-field input,
+header .input-field button {
+	height: 100%;
+}
+
+header .input-field input {
+	border: none;
+	outline: none;
+	flex: 1;
+	padding-inline: 0.5rem;
+	color: var(--gray-500);
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: inherit;
+}
+
+header .input-field button {
+	color: #374151;
+	background: #f9fafb;
+	width: 7.5rem;
+	border-left: 1px solid #d1d5db;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+@media (max-width: 769px) {
+	.container {
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 550px) {
+	header {
+		height: 208px;
+	}
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	header .input-field {
+		padding-left: 0.5rem;
+	}
+
+	header form {
+		bottom: -10.5%;
+	}
+
+	header .input-field input {
+		font-size: 0.875rem;
+	}
+
+	header .input-field button {
+		width: 5rem;
+		font-size: 0.875rem;
+	}
 }
