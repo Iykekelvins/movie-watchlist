@@ -1,3 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+}
+
 html {
 	--bg: #ffffff;
 	--white: #ffffff;
@@ -5,10 +12,10 @@ html {
 	--gray: #111827;
 	--gray-50: #f9fafb;
 	--gray-300: #d1d5db;
+	--gray-400: #dfdddd;
 	--gray-600: #dfdddd;
 	--gray-700: #374151;
-
-	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	--gray-800: #363636;
 }
 
 html.dark {
@@ -18,14 +25,10 @@ html.dark {
 	--gray: #ffffff;
 	--gray-50: #4b4b4b;
 	--gray-300: transparent;
+	--gray-400: #787878;
 	--gray-600: #2e2e2f;
 	--gray-700: #ffffff;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	--gray-800: #ffffff;
 }
 
 body {
@@ -156,6 +159,17 @@ header .input-field button {
 	font-weight: 500;
 }
 
+header .toggle {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	gap: 0.5rem;
+}
+
 .empty-state {
 	display: flex;
 	flex-direction: column;
@@ -185,6 +199,14 @@ header .input-field button {
 
 .empty-state svg path {
 	fill: var(--gray-600);
+}
+
+.empty-state.watchlist-empty svg path {
+	fill: var(--gray-800);
+}
+
+.empty-state.watchlist-empty p {
+	color: var(--gray-400);
 }
 
 .movie-list {
