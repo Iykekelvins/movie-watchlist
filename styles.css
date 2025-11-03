@@ -282,7 +282,7 @@ header .toggle {
 }
 
 .modal-inner {
-	max-width: 650px;
+	max-width: 675px;
 	width: 100%;
 	background: var(--bg);
 	box-shadow: 0px 1px 2px 2px #0000000d;
