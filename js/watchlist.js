@@ -59,16 +59,20 @@ if (watchlist.length > 0) {
 	renderWatchList();
 }
 
-function toggleWatchlist(imdbID) {
-	let newWatchlist = watchlist;
+let newWatchlist = [];
 
+for (let item of watchlist) {
+	newWatchlist.push(item);
+}
+
+function toggleWatchlist(imdbID) {
 	newWatchlist = newWatchlist.filter((item) => item.imdbID !== imdbID);
 
 	localStorage.setItem('movie-watchlist', JSON.stringify(newWatchlist));
 
 	if (newWatchlist.length === 0) {
 		mainEl.innerHTML = `
-      <div class="empty-state watchlist-empty">
+	    <div class="empty-state watchlist-empty">
 				<p>Your watchlist is looking a little empty...</p>
 				<a href="/index.html">
 					<svg
@@ -87,10 +91,10 @@ function toggleWatchlist(imdbID) {
 					Let&apos;s add some movies!</a
 				>
 			</div>
-      `;
+	    `;
+	} else {
+		renderWatchList(newWatchlist);
 	}
-
-	renderWatchList(newWatchlist);
 }
 
 document.addEventListener('click', (e) => {

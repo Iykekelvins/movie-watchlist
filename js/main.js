@@ -4,6 +4,11 @@ const mainEl = document.querySelector('main');
 
 let movies = [];
 let watchlist = [];
+let watchlistFromLocalStorage = JSON.parse(localStorage.getItem('movie-watchlist'));
+
+if (watchlistFromLocalStorage) {
+	watchlist = watchlistFromLocalStorage;
+}
 
 function toggleWatchlist(imdbID) {
 	const movie = movies.find((movie) => movie.imdbID === imdbID);
