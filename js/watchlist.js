@@ -178,7 +178,7 @@ function renderMovie() {
 }
 
 async function getMovieDetails(imdbID) {
-	const res = await fetch(`http://www.omdbapi.com?apikey=5cb2898e&i=${imdbID}`);
+	const res = await fetch(`https://www.omdbapi.com?apikey=5cb2898e&i=${imdbID}`);
 
 	const data = await res.json();
 
