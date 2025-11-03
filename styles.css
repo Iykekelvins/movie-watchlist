@@ -13,6 +13,7 @@ html {
 	--gray-50: #f9fafb;
 	--gray-300: #d1d5db;
 	--gray-400: #dfdddd;
+	--gray-500: #6b7280;
 	--gray-600: #dfdddd;
 	--gray-700: #374151;
 	--gray-800: #363636;
@@ -26,6 +27,7 @@ html.dark {
 	--gray-50: #4b4b4b;
 	--gray-300: transparent;
 	--gray-400: #787878;
+	--gray-500: #9ca3af;
 	--gray-600: #2e2e2f;
 	--gray-700: #ffffff;
 	--gray-800: #ffffff;
